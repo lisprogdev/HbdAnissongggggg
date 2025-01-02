@@ -1,7 +1,7 @@
 body {
     min-height: 100vh;
     position: relative;
-    overflow: hidden;
+    overflow: hidden !important;
     display: flex;
     justify-content: center;
     align-items: center;
