@@ -159,6 +159,7 @@ body:hover::before {
         color: #ffffff;
         font-family: 'Poppins', sans-serif;
         overflow: hidden !important;
+        min-height: 100vh;
     }
 
     /* Carousel Inner Styling */
@@ -211,6 +212,7 @@ body:hover::before {
     body {
         font-size: 14px; /* Menyesuaikan ukuran font untuk layar lebih kecil */
         overflow: hidden !important;
+         min-height: 100vh;
     }
 
     /* Carousel Inner Styling */
