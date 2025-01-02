@@ -151,3 +151,85 @@ body:hover::before {
 .balloon:nth-child(18) { left: 25%; animation-duration: 16s; animation-delay: 8s; }
 .balloon:nth-child(19) { left: 35%; animation-duration: 12s; animation-delay: 5s; }
 .balloon:nth-child(20) { left: 45%; animation-duration: 10s; animation-delay: 1s; }
+
+/* Body Styling for Mobile */
+@media (max-width: 768px) {
+    body {
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        overflow: hidden;
+    }
+
+    /* Carousel Inner Styling */
+    .carousel-inner {
+        padding: 15px;
+        box-shadow: none;
+        border-radius: 10px;
+    }
+
+    /* Carousel Item Styling */
+    .carousel-item img {
+        height: 60vh;
+    }
+
+    /* Button Controls */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        transform: scale(1);
+    }
+
+    /* Balloon Styling for Mobile */
+    .balloon {
+        width: 70px; /* Smaller balloon size for mobile */
+    }
+
+    /* Animasi balon untuk mobile */
+    .balloon:nth-child(1) { left: 10%; animation-duration: 16s; animation-delay: 3s; }
+    .balloon:nth-child(2) { left: 20%; animation-duration: 15s; animation-delay: 5s; }
+    .balloon:nth-child(3) { left: 30%; animation-duration: 14s; animation-delay: 6s; }
+    .balloon:nth-child(4) { left: 40%; animation-duration: 16s; animation-delay: 8s; }
+    .balloon:nth-child(5) { left: 50%; animation-duration: 12s; animation-delay: 4s; }
+    .balloon:nth-child(6) { left: 60%; animation-duration: 13s; animation-delay: 7s; }
+    .balloon:nth-child(7) { left: 70%; animation-duration: 15s; animation-delay: 9s; }
+    .balloon:nth-child(8) { left: 80%; animation-duration: 14s; animation-delay: 10s; }
+    .balloon:nth-child(9) { left: 90%; animation-duration: 12s; animation-delay: 11s; }
+    /* Hapus balon untuk tampilan lebih kecil */
+    .balloon:nth-child(n+10) {
+        display: none;
+    }
+}
+
+/* Body Styling for Small Mobile */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Menyesuaikan ukuran font untuk layar lebih kecil */
+    }
+
+    /* Carousel Inner Styling */
+    .carousel-inner {
+        padding: 10px;
+    }
+
+    /* Carousel Item Styling */
+    .carousel-item img {
+        height: 50vh;
+    }
+
+    /* Balloon Styling for Small Mobile */
+    .balloon {
+        width: 50px; /* Ukuran balon yang lebih kecil */
+    }
+
+    /* Menyembunyikan carousel controls di tampilan kecil */
+    .carousel-control-prev, 
+    .carousel-control-next {
+        display: none;
+    }
+}
