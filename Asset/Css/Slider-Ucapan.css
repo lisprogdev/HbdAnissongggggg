@@ -8,7 +8,7 @@
     background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    overflow:hidden;
+    overflow: hidden !important;
 }
 
 body::before {
