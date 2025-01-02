@@ -1,0 +1,126 @@
+body {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../Img/Bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    z-index: -1;
+    transform: scale(1.1);
+}
+
+.content-wrapper {
+    text-align: center;
+}
+
+.photos-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-image-left {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideInLeft 1.5s ease forwards;
+}
+
+.profile-image-right {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateX(100px);
+    animation: slideInRight 1.5s ease forwards;
+}
+
+.greeting {
+    margin-top: 2rem;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1.5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+/* Styling untuk tombol open */
+.open-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1.5s ease forwards;
+    animation-delay: 2s;
+    transition: all 0.3s ease;
+}
+
+.open-button i {
+    font-size: 1.5rem;
+}
+
+.open-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    color: white;
+}
+
+
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
